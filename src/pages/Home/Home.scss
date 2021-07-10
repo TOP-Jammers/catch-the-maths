@@ -1,0 +1,36 @@
+@import 'styles/global';
+
+.Home {
+	background-color: $medium-dark-green;
+	height: 94vh;
+	padding: 3vh;
+	@include flex-column-center;
+	&__logo {
+		width: 300px;
+	}
+	&__characters {
+		margin: 3em;
+		@include flex-row-between;
+		justify-content: space-around;
+		&__left,
+		&__right {
+			list-style: none;
+			&__card {
+				& button {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					background: $medium-light-brown;
+					border: 2px solid $black;
+					border-radius: 15px;
+					padding: 1em;
+					margin: 1em;
+					& img {
+						width: 100px;
+					}
+				}
+			}
+		}	
+	}
+}
