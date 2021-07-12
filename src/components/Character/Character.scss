@@ -1,5 +1,5 @@
 .Character {
-	transition: padding-top 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 	&__smallBubble,	
 	&__bigBubble,	
 	&__question,
@@ -31,5 +31,8 @@
 		padding: 1em;
 		min-width: 8vw;
 		border-radius: 15px;
+	}
+	&__img {
+		transition: all 0.5s ease-in-out;
 	}
 }
