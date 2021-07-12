@@ -8,8 +8,13 @@
 	&__logo {
 		width: 300px;
 	}
-	&__characters {
+	&__characters,
+	&__characters--flip {
+		&--flip {
+			transform: rotateY(90deg);
+		}
 		margin: 3em;
+		transition: all .5s ease-in;
 		@include flex-row-between;
 		justify-content: space-around;
 		&__left,
@@ -24,13 +29,26 @@
 					background: $medium-light-brown;
 					border: 2px solid $black;
 					border-radius: 15px;
-					padding: 1em;
-					margin: 1em;
+					margin: 10px;
+					box-shadow: 0 5px $medium-dark-red;
+					transition: all 0.1s ease-out;
+					&:hover {
+						border-color: $white;
+					}
+					&:active {
+					    transform: translateY(4px);
+					    box-shadow: 0 1px $medium-dark-red;
+					}
 					& img {
 						width: 100px;
+						margin: 1em;
 					}
 				}
 			}
 		}	
 	}
+}
+
+.turnedOn {
+	transform: rotateY(0deg);
 }

@@ -1,0 +1,11 @@
+@import 'styles/global';
+
+.Levels {
+	background-color: $medium-dark-green;
+	height: 94vh;
+	padding: 3vh;
+	@include flex-column-center;
+	&__logo {
+		width: 300px;
+	}
+}

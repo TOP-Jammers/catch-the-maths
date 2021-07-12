@@ -1,0 +1,49 @@
+@import 'styles/global';
+
+.Level {
+	height: 100vh;
+	&__sky {
+		height: 30%;
+		background: $medium-light-cyan;
+		&__logo {
+			width: 20vw;
+			position: absolute;
+			left: 40vw;
+			top: 5vh;
+		}
+		&__sun {
+			width: 10vw;
+			position: absolute;
+			right: 10vw;
+			top: 5vh;
+		}
+		&__busStop {
+			width: 2vw;
+			position: absolute;
+			right: 20vw;
+			top: 20vh;
+		}
+		&__cloud1,
+		&__cloud2,
+		&__cloud3 {
+			width: 10vw;
+			position: absolute;
+			top: 10vh;
+			opacity: 50%;
+		}
+		&__cloud1 {
+			left: 15vw;
+		}
+		&__cloud2 {
+			left: 35vw;
+		}
+		&__cloud3 {
+			left: 65vw;
+		}
+	}
+	&__grass {
+		height: 70%;
+		background: $medium-light-yellow-green;
+	}
+}
+
