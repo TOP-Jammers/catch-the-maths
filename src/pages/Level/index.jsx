@@ -30,10 +30,12 @@ const Level = ({ character }) => {
         <img className="Level__sky__cloud2" src={cloud} alt="pixel art cloud"/>
         <img className="Level__sky__cloud3" src={cloud} alt="pixel art cloud"/>
         <img className="Level__sky__busStop" src={busStop} alt="pixel art bus stop sign"/>
-        <Roadgroup width={9}/>
       </div>
-      <div className="Level__grass">
+      <div className="Level__road">
+        <Roadgroup width={9}/>
         <Vehicule position={position}/>
+      </div >
+      <div className="Level__grass">
         <Walkalley character={character}/>
       </div>
     </div> 

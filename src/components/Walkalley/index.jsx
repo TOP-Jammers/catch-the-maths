@@ -6,18 +6,12 @@ const Walkalley = ({ character }) => {
   const [position, setPosition] = useState(0);
 
   const moveForward = () => {
-    setPosition(position+1);
+    if (position < 5) setPosition(position+1);
   }
-
-  useEffect(() => {
-    if (position < 4) {
-      moveForward();
-    }
-  }, [position]);
 
   return (
     <div className="Walkalley">
-      <Character character={character} position={position}/>
+      <Character character={character} position={position} moveForward={moveForward} />
     </div> 
   );
 }

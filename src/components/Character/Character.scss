@@ -1,0 +1,35 @@
+.Character {
+	transition: padding-top 0.5s ease-in-out;
+	&__smallBubble,	
+	&__bigBubble,	
+	&__question,
+	&__img {
+		transform: skewX(55deg);
+	}
+	&__smallBubble,	
+	&__bigBubble,	
+	&__question {
+		background: white;
+		border: 2px solid black;
+		margin: -.4em;
+		margin-left: -2vw;
+	}
+	&__smallBubble,	
+	&__bigBubble {
+		border-radius: 50%;
+	}
+
+	&__smallBubble {
+		width: .3vw;
+		height: .3vw;
+	}
+	&__bigBubble {
+		width: .7vw;
+		height: .7vw;
+	}
+	&__question {
+		padding: 1em;
+		min-width: 8vw;
+		border-radius: 15px;
+	}
+}

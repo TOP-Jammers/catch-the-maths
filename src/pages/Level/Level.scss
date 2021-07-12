@@ -41,8 +41,15 @@
 			left: 65vw;
 		}
 	}
+	&__road {
+		height: 10%;
+		width: 100%;
+		background: $medium-light-yellow-green;
+		display: flex;
+		justify-content: center;
+	}
 	&__grass {
-		height: 70%;
+		height: 60%;
 		background: $medium-light-yellow-green;
 	}
 }

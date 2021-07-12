@@ -1,13 +1,10 @@
 .Roadgroup {
 	&__list {
-		width: 80vw;
+		width: 100%;
 		display: flex;
-		position: relative;
-		top: 28vh;
-		left: 15vw;
 		list-style: none;
 		&__item {
-			margin: -1.36vw;
+			margin: 0 -1.2vw;
 			&__img {
 				width: 10vw;
 			}
