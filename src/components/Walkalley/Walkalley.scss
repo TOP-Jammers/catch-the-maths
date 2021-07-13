@@ -2,7 +2,7 @@
 
 .Walkalley {
 	position: relative;
-	border-bottom: 65.2vh solid $medium-dark-yellow-2;
+	border-bottom: 65.2vh solid $medium-light-cyan-blue;
 	border-left: 0 solid transparent;
 	border-right: 10vw solid transparent;
 	height: 0;
@@ -10,4 +10,5 @@
 	transform: skewX(-55deg);
 	left: 50vw;
 	bottom: 5.2vh;
+	z-index: 3;
 }

@@ -1,38 +1,49 @@
 .Character {
 	transition: all 0.5s ease-in-out;
-	&__smallBubble,	
-	&__bigBubble,	
-	&__question,
-	&__img {
+	&__bubbles,	
+	&__container {
 		transform: skewX(55deg);
 	}
-	&__smallBubble,	
-	&__bigBubble,	
-	&__question {
-		background: white;
-		border: 2px solid black;
-		margin: -.4em;
-		margin-left: -2vw;
+	&__bubbles {
+		position: relative;
+		bottom: 25vh;
+		left: -100px;
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		&__smallBubble,	
+		&__bigBubble,	
+		&__question {
+			background: white;
+			border: 2px solid black;
+		}
+		&__smallBubble,	
+		&__bigBubble {
+			border-radius: 50%;
+		}
+		&__smallBubble {
+			width: 10px;
+			height: 10px;
+			align-self: flex-start;
+		}
+		&__bigBubble {
+			width: 15px;
+			height: 15px;
+			align-self: center;
+		}
+		&__question {
+			padding: 1em;
+			width: 200px;
+			border-radius: 15px;
+			display: flex;
+			justify-content: center;
+			align-self: flex-end;
+		}
 	}
-	&__smallBubble,	
-	&__bigBubble {
-		border-radius: 50%;
-	}
-
-	&__smallBubble {
-		width: .3vw;
-		height: .3vw;
-	}
-	&__bigBubble {
-		width: .7vw;
-		height: .7vw;
-	}
-	&__question {
-		padding: 1em;
-		min-width: 8vw;
-		border-radius: 15px;
-	}
-	&__img {
-		transition: all 0.5s ease-in-out;
+	&__container {
+		height: 15vh;
+		&__img {
+			transition: all 0.5s ease-in-out;
+		}
 	}
 }

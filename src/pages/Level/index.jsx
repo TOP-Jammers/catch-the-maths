@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
 import Roadgroup from 'components/Roadgroup';
 import Vehicule from 'components/Vehicule';
 import Walkalley from 'components/Walkalley';
@@ -10,6 +11,7 @@ import './Level.scss';
 
 const Level = ({ character }) => {
   const [position, setPosition] = useState(0);
+  let { selection } = useParams();
 
   const moveForward = () => {
     setPosition(position+0.1);
@@ -24,6 +26,7 @@ const Level = ({ character }) => {
   return (
     <div className="Level">
       <div className="Level__sky">
+        <p>level {selection}</p>
         <img className="Level__sky__logo" src={logo} alt="logo catch the maths"/>
         <img className="Level__sky__sun" src={sun} alt="pixel art sun with a face"/>
         <img className="Level__sky__cloud1" src={cloud} alt="pixel art cloud"/>

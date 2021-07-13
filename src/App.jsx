@@ -19,7 +19,7 @@ const App = () => {
             <Levels character={character} />
           </Route>
           <Route path="/level/:selection">
-            <Level character={character} />
+            <Level character={character}/>
           </Route>
         </Switch>
       </main>
