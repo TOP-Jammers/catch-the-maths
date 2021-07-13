@@ -2,6 +2,7 @@
 
 .Level {
 	height: 100vh;
+	overflow: hidden;
 	&__sky {
 		height: 30vh;
 		background: $medium-light-cyan;
@@ -21,7 +22,7 @@
 			width: 2vw;
 			position: absolute;
 			right: 20vw;
-			top: 20vh;
+			bottom: 70vh;
 		}
 		&__cloud1,
 		&__cloud2,
@@ -42,16 +43,19 @@
 		}
 	}
 	&__road {
-		height: 10vh;
+		height: 5vh;
 		width: 100%;
 		background: $medium-light-yellow-green;
 		display: flex;
 		justify-content: center;
 	}
 	&__grass {
-		height: 60vh;
+		height: 65vh;
 		background: $medium-light-yellow-green;
-		overflow: hidden;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		padding-left: 25vw;
 	}
 	&__explanation {
 		display: flex;

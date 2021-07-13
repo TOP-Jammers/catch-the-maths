@@ -46,7 +46,7 @@ const Level = ({ character }) => {
       <div className="Level__grass">
         <Walkalley character={character}/>
       </div>
-      <div className="Level__explanation">
+      <div className="Level__explanation" style={{display: `${levelStarted ? "none" : "flex"}`}}>
         <p>level {selection}</p>
         <button onClick={startLevel}>start</button>
         <Link to="/levels">return to level selection</Link>

@@ -1,14 +1,11 @@
 @import 'styles/global';
 
 .Walkalley {
-	position: relative;
-	border-bottom: 65.2vh solid $medium-light-cyan-blue;
+	border-bottom: 70vh solid $medium-light-cyan-blue;
 	border-left: 0 solid transparent;
-	border-right: 10vw solid transparent;
+	border-right: 20vh solid transparent;
 	height: 0;
-	width: 3vw;
-	transform: skewX(-55deg);
-	left: 50vw;
-	bottom: 5.2vh;
-	z-index: 3;
+	width: 25vh;
+	transform: skewX(-45deg);
+	bottom: 0;
 }
