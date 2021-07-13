@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Roadgroup from 'components/Roadgroup';
 import Vehicule from 'components/Vehicule';
 import Walkalley from 'components/Walkalley';
@@ -11,17 +11,22 @@ import './Level.scss';
 
 const Level = ({ character }) => {
   const [position, setPosition] = useState(0);
+  const [levelStarted, setLevelStarted] = useState(false);
   let { selection } = useParams();
 
   const moveForward = () => {
     setPosition(position+0.1);
   }
 
+  const startLevel = () => {
+    setLevelStarted(true);
+  }
+
    useEffect(() => {
-    if (position < 55) {
+    if (levelStarted && position < 55) {
       setTimeout( () => moveForward(), 100);
     }
-  }, [position]);
+  }, [position, levelStarted]);
 
   return (
     <div className="Level">
@@ -40,6 +45,11 @@ const Level = ({ character }) => {
       </div >
       <div className="Level__grass">
         <Walkalley character={character}/>
+      </div>
+      <div className="Level__explanation">
+        <p>level {selection}</p>
+        <button onClick={startLevel}>start</button>
+        <Link to="/levels">return to level selection</Link>
       </div>
     </div> 
   );

@@ -3,7 +3,7 @@
 .Level {
 	height: 100vh;
 	&__sky {
-		height: 30%;
+		height: 30vh;
 		background: $medium-light-cyan;
 		&__logo {
 			width: 20vw;
@@ -42,15 +42,31 @@
 		}
 	}
 	&__road {
-		height: 10%;
+		height: 10vh;
 		width: 100%;
 		background: $medium-light-yellow-green;
 		display: flex;
 		justify-content: center;
 	}
 	&__grass {
-		height: 60%;
+		height: 60vh;
 		background: $medium-light-yellow-green;
+		overflow: hidden;
+	}
+	&__explanation {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1em;
+		width: 60vw;
+		height: 55vh;
+		border: 2px solid $black;
+		border-radius: 15px;
+		position: absolute;
+		top: 35vh;
+		left: 20vw;
+		background: $white;
+		z-index: 4;
 	}
 }
 

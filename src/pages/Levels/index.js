@@ -1,9 +1,8 @@
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from 'img/logo.png';
 import './Levels.scss';
 
 const Levels = ({ character }) => {
-  let history = useHistory();
 
   return (
     <div className="Levels">
