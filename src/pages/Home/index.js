@@ -5,13 +5,16 @@ import croco2 from 'img/characters/croco2.png';
 import elephant from 'img/characters/elephant.png';
 import wolf from 'img/characters/wolf.png';
 import logo from 'img/logo.png';
+import confirmAudio from 'music/SFX_UIGeneric16.mp3';
 import './Home.scss';
 
 const Home = ({ character, setCharacter }) => {
   const [cardFlip, setCardFlip] = useState('');
   let history = useHistory();
+  const [confirm] = useState(new Audio(confirmAudio));
 
   const handleClick = (chosenCharacter) => {
+    confirm.play();
     setCharacter(chosenCharacter);
   }
 

@@ -2,16 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Character from 'components/Character';
 import './Walkalley.scss';
 
-const Walkalley = ({ character }) => {
-  const [position, setPosition] = useState(0);
-
-  const moveForward = () => {
-    if (position < 5) setPosition(position+1);
-  }
+const Walkalley = ({ character, question, answerLeft, answerRight, answer }) => {
 
   return (
     <div className="Walkalley">
-      <Character character={character} position={position} moveForward={moveForward} />
+      <Character character={character} question={question} answerLeft={answerLeft} answerRight={answerRight} answer={answer} />
     </div> 
   );
 }

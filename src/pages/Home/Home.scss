@@ -26,14 +26,14 @@
 					flex-direction: column;
 					align-items: center;
 					justify-content: center;
-					background: $medium-light-brown;
+					background: $light-yellow;
 					border: 2px solid $black;
 					border-radius: 15px;
 					margin: 10px;
 					box-shadow: 0 5px $medium-dark-red;
 					transition: all 0.1s ease-out;
 					&:hover {
-						border-color: $white;
+						border-color: $dark-red-orange;
 					}
 					&:active {
 					    transform: translateY(4px);
