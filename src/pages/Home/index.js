@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import croco from 'img/characters/croco.png';
 import croco2 from 'img/characters/croco2.png';
@@ -13,21 +13,22 @@ const Home = ({ character, setCharacter }) => {
   let history = useHistory();
   const [confirm] = useState(new Audio(confirmAudio));
 
-  const handleClick = (chosenCharacter) => {
-    confirm.play();
-    setCharacter(chosenCharacter);
-  }
+  
 
   const flipcard = () => {
     cardFlip === '' ? setCardFlip('--flip') : setCardFlip('');
   }
 
-  useEffect(() => {
-    if (character !== '') {
-      flipcard();
-      setTimeout( () => history.push('/levels'), 1000);
-    }
-  }, [character]);
+  const getToLevels = () => {
+    setTimeout( () => history.push('/levels'), 1000);
+  }
+
+  const handleClick = (chosenCharacter) => {
+    confirm.play();
+    setCharacter(chosenCharacter);
+    flipcard();
+    getToLevels();
+  }
 
   return (
     <div className="Home">

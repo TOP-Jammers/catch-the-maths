@@ -1,8 +1,24 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useEffect } from 'react';
 import './Character.scss';
 
 const Character = ({ character, question, answerLeft, answerRight, answer }) => {
+
+  const downHandler = ({ key }) => {
+    console.log(key)
+    if (key === 'ArrowLeft') {
+      answerLeft();
+    }
+    if (key === 'ArrowRight') {
+      answerRight();
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('keydown', downHandler)
+    return () => {
+      window.removeEventListener('keydown', downHandler)
+    }
+  }, [downHandler])
 
   return (
     <div className="Character" style={{paddingTop: `${40 - answer.correct*7.9}vh`}}>

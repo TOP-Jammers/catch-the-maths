@@ -32,6 +32,9 @@ const Level = ({ character }) => {
       setPosition(position+(3/data[selection].time));
       setTimeLeft(timeLeft-0.1)
     }
+    if(timeLeft<=0) {
+      setLevelStarted('time');
+    }
   }
 
   const startLevel = () => {
@@ -48,8 +51,8 @@ const Level = ({ character }) => {
 
   const winGame = () => {
     setLevelStarted('won');
-    let storedLevels = JSON.parse(localStorage.getItem('ctm-levels'));
-    localStorage.setItem('ctm-levels', JSON.stringify([...storedLevels, data[selection].unlocks]));
+    let storedLevels = [...JSON.parse(localStorage.getItem('ctm-levels')), ...data[selection].unlocks];
+    localStorage.setItem('ctm-levels', JSON.stringify([...new Set(storedLevels)]));
   }
 
   const getWrong = () => {
@@ -135,7 +138,7 @@ const Level = ({ character }) => {
             <p className="Level__explanation__description">You took too much time, get back to level selection and try again</p>
           </>
         }
-        <Link to="/levels"><a className="Level__explanation__returnLink">return to level selection</a></Link>
+        <Link to="/levels"><p className="Level__explanation__returnLink">return to level selection</p></Link>
       </div>
     </div> 
   );
