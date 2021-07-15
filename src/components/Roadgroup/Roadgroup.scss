@@ -1,0 +1,13 @@
+.Roadgroup {
+	&__list {
+		width: 100%;
+		display: flex;
+		list-style: none;
+		&__item {
+			margin: 0 -2.4vh;
+			&__img {
+				height: 5vh;
+			}
+		}
+	}
+}
