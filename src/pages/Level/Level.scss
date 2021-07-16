@@ -1,0 +1,98 @@
+@import 'styles/global';
+
+.Level {
+	height: 100vh;
+	overflow: hidden;
+	&__sky {
+		height: 30vh;
+		background: $medium-light-cyan;
+		&__logo {
+			width: 20vw;
+			position: absolute;
+			left: 40vw;
+			top: 5vh;
+		}
+		&__sun {
+			width: 10vw;
+			position: absolute;
+			right: 10vw;
+			top: 5vh;
+		}
+		&__busStop {
+			width: 2vw;
+			position: absolute;
+			right: 18vw;
+			bottom: 70vh;
+		}
+		&__cloud1,
+		&__cloud2,
+		&__cloud3 {
+			width: 10vw;
+			position: absolute;
+			top: 10vh;
+			opacity: 50%;
+		}
+		&__cloud1 {
+			left: 15vw;
+		}
+		&__cloud2 {
+			left: 35vw;
+		}
+		&__cloud3 {
+			left: 65vw;
+		}
+	}
+	&__road {
+		height: 5vh;
+		width: 100%;
+		background: $medium-light-yellow-green;
+		display: flex;
+		justify-content: center;
+	}
+	&__grass {
+		height: 65vh;
+		background: $medium-light-yellow-green;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		padding-left: 32vw;
+	}
+	&__explanation {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 1em;
+		width: 60vw;
+		height: 50vh;
+		border: 2px solid $black;
+		border-radius: 15px;
+		position: absolute;
+		top: 40vh;
+		left: 20vw;
+		background: $white;
+		z-index: 4;
+		&__description {
+			width: 60%;
+			line-height: 2em;
+		}
+		&__startBtn {
+			padding: 1em;
+			background: $light-yellow;
+			border: 2px solid $black;
+			box-shadow: 0 5px $medium-dark-red;
+			border-radius: 15px;
+			font-family: inherit;
+			font-size: 1.2em;
+			&:hover {
+				border-color: $dark-red-orange;
+				color: $dark-red-orange;
+			}
+			&:active {
+			    transform: translateY(4px);
+			    box-shadow: 0 1px $medium-dark-red;
+			}
+		}
+	}
+}
+

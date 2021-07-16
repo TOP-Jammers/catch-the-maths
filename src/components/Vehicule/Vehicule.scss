@@ -1,0 +1,15 @@
+.Vehicule {
+	position: absolute;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1vw 1vw 9vw 1fr 1vw;
+	&__empty {
+		grid-column: 2 / 3;
+	}
+	&__img {
+		grid-column: 3 / 4;
+		width: 9vw;
+		// z-index: 1;
+		margin-top: -3.5vh;
+	}
+}
